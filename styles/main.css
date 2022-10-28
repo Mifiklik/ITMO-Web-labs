@@ -294,6 +294,17 @@ footer
 
 @media (max-width: 768px)
 {
+    .container
+    {
+        margin-left: 40px;
+        margin-right: 0;
+    }
+
+    .title__block
+    {
+        margin-left: 20px;
+    }
+
     .header__main, .navbar
     {
         display: none;
@@ -305,7 +316,7 @@ footer
     }
     .product:not(:last-child)
     {
-        margin-right: 10px;
+        margin-right: 0;
     }
     .product
     {
@@ -329,7 +340,7 @@ footer
     }
     .product
     {
-        max-width: 60%;
+        max-width: 80%;
         margin-bottom: 3em;
         margin-left: 0;
         margin-right: 0;
@@ -342,5 +353,29 @@ footer
     .title__block h3
     {
         font-size: 2em;
+    }
+}
+
+@media (max-width: 450px)
+{
+    .product:not(:last-child)
+    {
+        margin-right: 10px;
+    }
+    .product
+    {
+        max-width: 80%;
+        margin-bottom: 3em;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .title__block h2
+    {
+        font-size: 2em;
+    }
+    .title__block h3
+    {
+        font-size: 1em;
     }
 }
