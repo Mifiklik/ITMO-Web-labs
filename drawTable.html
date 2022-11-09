@@ -10,8 +10,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;500;700&display=swap" rel="stylesheet"> 
+    <script src="scripts/tableNotes.js" defer></script>
 
-    <title>Document</title>
+    <title>Draw notes table</title>
 </head>
 <body>
     <header class="header container">
@@ -56,60 +57,12 @@
         </ul>
     </header>
     <main>
-        <div class="title__block">
-            <h3>Alibi action figures</h2>
-            <h2>New arrivals</h2>
-            <a href="#" class="white__button">Shop now</a>
-        </div>
-
-        <div class="section products container">
-            <div class="product">
-                <img class="product__image" src="images/Wife.png" alt="WIFE">
-                <h3 class="product__name">Wife</h3>
-                <a class="black__button" href="#">buy</a>
-            </div>
-
-            <div class="product">
-                <img class="product__image" src="images/Icarus.png" alt="ICARUS">
-                <h3 class="product__name">Icarus</h3>
-                <a class="black__button" href="#">buy</a>
-            </div>
-
-            <div class="product">
-                <img class="product__image" src="images/Cleaner.png" alt="CLEANER">
-                <h3 class="product__name">Cleaner</h3>
-                <a class="black__button" href="#">buy</a>
-            </div>
-
-            <div class="product">
-                <img class="product__image" src="images/Frenk.png" alt="FRENK">
-                <h3 class="product__name">Frenk</h3>
-                <a class="black__button" href="#">buy</a>
-            </div>
-
-            <div class="product">
-                <img class="product__image" src="images/AP-050.png" alt="AP-050">
-                <h3 class="product__name">AP-050</h3>
-                <a class="black__button" href="#">buy</a>
-            </div>
+        <div class="tools">
+            <button onclick="TryCreateTable()" class="black__button tool" id="createTableButton">Creat table</button>
+            <button onclick="AddRow()" class="black__button tool" id="addRowButton">Add row</button>
+            <button onclick="RemoveRow()" class="black__button tool" id="removeRowButton">Remove row №</button>
+            <input class="number__input tool" type="number" name="lineIndex" id="lineIndex">
         </div>
     </main>
-
-    <footer>
-        <div>
-            <h3 class="links__title">Ссылки</h3>
-            <ul class="footer__links">
-                <li>
-                    <a class="footer__link" href="https://vk.com/weepingsky" target="_blank" name="links">Группа WS в ВК</a>
-                </li>
-                <li>
-                    <a class="footer__link" href="#" target="_blank">Группа Создаватель в ВК</a>
-                </li>
-                <li> 
-                    <a class="footer__link" href="https%3A%2F%2Fdiscord.gg%2FJ2THZBVYnw" target="_blank">Discord канал</a>
-                </li>
-            </ul>
-        </div>
-    </footer>
 </body>
 </html>
