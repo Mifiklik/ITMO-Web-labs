@@ -2,6 +2,7 @@ body
 {
     margin: 0;
     font-family: 'Inter', sans-serif;
+    background-color: #f8f8f8;
 }
 
 .nav
@@ -129,10 +130,10 @@ body
     align-items: center;
     margin: 0;
     width: 100%;
-    height: auto;
+    height: 50vh;
     justify-content: center;
     box-shadow: inset 0px 9px 12px rgba(0, 0, 0, 0.40);
-    background-image:url("../images/title_block_1.png");
+    background-image:url("../images/title_block_2.png");
     background-size: no-repeat;
 
     background-position: center;
@@ -144,7 +145,7 @@ body
 {
     margin-top: 0;
     margin-bottom: 0;
-    color: #f8f8f8;
+    color: #5a5858;
     font-size: 4em;
     font-weight: 600;
 }
@@ -153,9 +154,9 @@ body
 {
     margin-top: 2em;
     margin-bottom: 0;
-    color: #f8f8f8;
+    color: #5a5858;
     font-size: 2em;
-    font-weight: 200;
+    font-weight: 300;
 }
 
 .white__button

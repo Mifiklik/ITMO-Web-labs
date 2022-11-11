@@ -47,11 +47,11 @@ function AddRow()
     const tr = table.insertRow();
     let td = tr.insertCell();
     td.style.border = '1px solid black';
-    td.appendChild(document.createTextNode(`${++rowCount}`));
+    td.textContent =++rowCount;
 
     td = tr.insertCell();
     td.style.border = '1px solid black';
-    td.appendChild(document.createTextNode(`${new Date().toLocaleDateString()}`));
+    td.textContent = new Date().toLocaleDateString();
 
     td = tr.insertCell();
     td.style.border = '1px solid black';
