@@ -48,6 +48,7 @@ function AddRow()
     let td = tr.insertCell();
     td.style.border = '1px solid black';
     td.textContent =++rowCount;
+    td.className = "numberCell";
 
     td = tr.insertCell();
     td.style.border = '1px solid black';
@@ -90,9 +91,21 @@ function RemoveRow()
     table.deleteRow(index);
     rowCount--;
 
+    UpdateCells();
+
     if(rowCount < 1)
         DropTable();
 }
+
+function UpdateCells()
+{
+    let cells = document.querySelectorAll('.numberCell');
+    let i = 0;
+    cells.forEach(element => {
+        element.textContent = ++i;
+    });
+}
+
 
 function DropTable()
 {
