@@ -22,31 +22,17 @@ function TryCreateTable()
     table.className = "tableNotes";
     table.id = "tableNotes";
     document.body.appendChild(table);
-    table.style.width = '300px';
     table.style.border = '1px solid black';
 
     table.innerHTML = `<thead class="thead-dark">
     <tr>
       <th scope="col">№</th>
       <th scope="col">Date</th>
-      <th scope="col">Note</th>
+      <th scope="col" style="width:90%">Note</th>
     </tr>
   </thead>`;
 
-  const tr = table.insertRow();
-  let td = tr.insertCell();
-  td.style.border = '1px solid black';
-  td.appendChild(document.createTextNode(`${++rowCount}`));
-
-  td = tr.insertCell();
-  td.style.border = '1px solid black';
-  td.appendChild(document.createTextNode(`${new Date().toLocaleDateString()}`));
-
-  td = tr.insertCell();
-  td.style.border = '1px solid black';
-  let inputbox = document.createElement("input");
-  inputbox.setAttribute("type", "text");
-  td.appendChild(inputbox);
+  AddRow();
 
 
     tableWasCreated = true;
@@ -69,15 +55,24 @@ function AddRow()
 
     td = tr.insertCell();
     td.style.border = '1px solid black';
-    let inputbox = document.createElement("input");
-    inputbox.setAttribute("type", "text");
+    let inputbox = document.createElement("textarea");
+    inputbox.className = "noteArea";
+    inputbox.setAttribute("style", "height: 1em;" + " overflow-y:hidden;");
+    inputbox.setAttribute("placeholder", "Type, paste, cut text here...");
+    inputbox.addEventListener("input", OnInput, false);
     td.appendChild(inputbox);
 }
 
 function RemoveRow()
 {
     let index = lineIndex.value;
-    
+
+    if(isNaN(index))
+    {
+        alert("NaN");
+        return;
+    }
+
     if(index.trim() === '')
     {
         table.deleteRow(rowCount--);
@@ -86,13 +81,7 @@ function RemoveRow()
         return;
     }
 
-    if(isNaN(index))
-    {
-        alert("NaN");
-        return;
-    }
-
-    if(index > rowCount)
+    if(index > rowCount || index < 1)
     {
         alert("Line not found");
         return;
@@ -113,4 +102,9 @@ function DropTable()
 
     table.remove();
 }
+
+function OnInput() {
+    this.style.height = 0;
+    this.style.height = (this.scrollHeight) + "px";
+  }
 

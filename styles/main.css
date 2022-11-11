@@ -295,6 +295,18 @@ footer
     margin-right: 2em;
 }
 
+.tableNotes
+{
+    display: block;
+    margin: auto;
+    width: 50vw;
+}
+
+.noteArea
+{
+    width: 99%;
+}
+
 @media (max-width: 992px)
 {
     .search__line
